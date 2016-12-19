@@ -1,8 +1,9 @@
 ---
 name: Paraview
 description: |-
-  **Paraview** provides access to the Paraview GUI on one or more compute nodes
-  on the Oakley cluster at the Ohio Supercomputer Center (OSC).
+  **Paraview** provides access to the Paraview GUI on an Oakley shared node at
+  the Ohio Supercomputer Center (OSC). Care must be taken to avoid heavy
+  computation as the resources are shared with many users.
 category: Desktop Apps
 subcategory: Virtual Desktop Interface
 role: vdi
