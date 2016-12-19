@@ -1,0 +1,9 @@
+---
+name: Paraview
+description: |-
+  **Paraview** provides access to the Paraview GUI on one or more compute nodes
+  on the Oakley cluster at the Ohio Supercomputer Center (OSC).
+category: Desktop Apps
+subcategory: Virtual Desktop Interface
+role: vdi
+url: /pun/sys/vncsim/%{app_token}/sessions

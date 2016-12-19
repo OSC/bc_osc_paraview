@@ -1,0 +1,11 @@
+title: 'Paraview'
+shared:
+  - name: 'Paraview 4.4.0'
+    batch: 'quick'
+    cluster: 'oakley'
+    node:
+      - type: 'oakley'
+        ppn: 1
+    pbs:
+      envvars:
+        PARAVIEW_MODULE: 'paraview/4.4.0'
