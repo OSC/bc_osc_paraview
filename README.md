@@ -1,5 +1,8 @@
 # Batch Connect - OSC Paraview
 
+![GitHub Release](https://img.shields.io/github/release/osc/bc_osc_paraview.svg)
+![GitHub License](https://img.shields.io/github/license/osc/bc_osc_paraview.svg)
+
 A VNCSim app designed for OSC OnDemand that launches Paraview within an Oakley
 shared node through Quick batch.
 
