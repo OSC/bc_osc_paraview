@@ -3,6 +3,9 @@
 # Set working directory to home directory
 cd "${HOME}"
 
+# Restore the module environment to avoid conflicts
+module restore
+
 # Launch FVWM
 FVWM_ASSETS_ROOT="${ROOT}/bc_fvwm_assets/template"
 FVWM_ROOT="${FVWM_ASSETS_ROOT}" "${FVWM_ASSETS_ROOT}/fvwm_wrapper" -f "${ROOT}/fvwm/fvwmrc" &

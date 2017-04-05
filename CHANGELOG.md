@@ -1,5 +1,9 @@
 ## Unreleased
 
+Bugfixes:
+
+  - sanitize module environment before loading gui
+
 ## 0.0.3 (2017-03-22)
 
 Bugfixes:
