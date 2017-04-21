@@ -1,5 +1,9 @@
 ## Unreleased
 
+Features:
+
+  - added `bin/setup` script for easier deployment
+
 Bugfixes:
 
   - sanitize module environment before loading gui
