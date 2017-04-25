@@ -18,7 +18,11 @@ module load ${PARAVIEW_MODULE}
 #
 
 module load virtualgl
-vglrun paraview
+if [[ ${INPUT_FILE} ]]; then
+  vglrun paraview --data=${INPUT_FILE}
+else
+  vglrun paraview
+fi
 
 # Kill vncserver when user closes GUI
 vncserver -kill ${DISPLAY}
