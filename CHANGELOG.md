@@ -3,6 +3,7 @@
 Features:
 
   - remove FVWM and added Fluxbox as the window manager
+  - added an optional input file environment variable
 
 ## 0.0.5 (2017-04-24)
 

@@ -68,6 +68,14 @@ also assumes module support through the
 package manager is installed on the running compute node as well as the
 requested module in `$PARAVIEW_MODULE`.
 
+### INPUT_FILE
+
+*Optional*
+
+If this environment variable is set, then Paraview will attempt to load the
+file path specified in this variable. This can be an absolute path or relative
+to the user's home directory.
+
 ## Contributing
 
 1. Fork it ( https://github.com/OSC/bc_osc_paraview/fork )
