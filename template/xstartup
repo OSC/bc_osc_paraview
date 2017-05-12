@@ -6,23 +6,34 @@ cd "${HOME}"
 # Restore the module environment to avoid conflicts
 module restore
 
+#
 # Launch Fluxbox
+#
+
 FLUXBOX_RC_FILE="${PBS_O_WORKDIR}/${PBS_JOBID}.rc"
 FLUXBOX_ASSETS_ROOT="${ROOT}/fluxbox"
+
+# Build Fluxbox init file
 cat > "${FLUXBOX_RC_FILE}" << EOT
 session.screen0.toolbar.widthPercent: 60
 session.menuFile: $FLUXBOX_ASSETS_ROOT/menu
 session.keyFile: $FLUXBOX_ASSETS_ROOT/keys
 EOT
-DISPLAY=${DISPLAY}.0 fluxbox -rc "${FLUXBOX_RC_FILE}" &
 
-# Load the Paraview module
-module load ${PARAVIEW_MODULE}
+# Export the module function for the terminal
+[[ $(type -t module) == "function" ]] && export -f module
+
+# Start the Fluxbox window manager
+fluxbox -display "${DISPLAY}.0" -rc "${FLUXBOX_RC_FILE}" &
 
 #
 # Start Paraview
 #
 
+# Load the Paraview module
+module load ${PARAVIEW_MODULE}
+
+# Launch Paraview
 module load virtualgl
 if [[ ${INPUT_FILE} ]]; then
   vglrun paraview --data=${INPUT_FILE}
