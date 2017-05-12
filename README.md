@@ -12,10 +12,18 @@ This app requires the following software be installed on the nodes that the
 batch job is intended to run on:
 
 - [Paraview](http://www.paraview.org/) 4.4.0+
-- [VirtualGL](http://www.virtualgl.org/) 2.3+
-- [TurboVNC](http://www.turbovnc.org/) 2.1+
 - [Lmod](https://www.tacc.utexas.edu/research-development/tacc-projects/lmod) 6.0.1+
 - [Fluxbox](http://fluxbox.org/) 1.1.1+
+
+For hardware rendering support:
+
+- [X server](https://www.x.org/)
+- [VirtualGL](http://www.virtualgl.org/) 2.3+
+
+For VNC server support:
+
+- [TurboVNC](http://www.turbovnc.org/) 2.1+
+- [noVNC](https://github.com/novnc/noVNC) 0.6.2+
 
 ## Install
 
