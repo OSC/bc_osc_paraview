@@ -11,7 +11,6 @@ FLUXBOX_RC_FILE="${PBS_O_WORKDIR}/${PBS_JOBID}.rc"
 FLUXBOX_ASSETS_ROOT="${ROOT}/fluxbox"
 cat > "${FLUXBOX_RC_FILE}" << EOT
 session.screen0.toolbar.widthPercent: 60
-
 session.menuFile: $FLUXBOX_ASSETS_ROOT/menu
 session.keyFile: $FLUXBOX_ASSETS_ROOT/keys
 EOT
