@@ -11,5 +11,5 @@ attributes:
     help: "You can leave this blank if **not** in multiple projects."
 form:
   - bc_num_hours
-  - bc_vnc_resolution
   - bc_account
+  - bc_vnc_resolution
