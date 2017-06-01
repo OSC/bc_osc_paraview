@@ -7,6 +7,8 @@ description: |
 attributes:
   bc_vnc_resolution:
     required: true
+  bc_account:
+    help: "You can leave this blank if **not** in multiple projects."
 form:
   - bc_num_hours
   - bc_vnc_resolution
