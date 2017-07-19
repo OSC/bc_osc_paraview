@@ -57,4 +57,4 @@ module load ${PARAVIEW_MODULE}
 
 # Launch Paraview
 module load virtualgl
-vglrun paraview
+vglrun paraview --data=$INPUT_FILE
