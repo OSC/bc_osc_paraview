@@ -4,7 +4,8 @@ batch_connect:
 
 script:
   job_environment:
-    PARAVIEW_MODULE: "paraview/4.4.0"
+    PARAVIEW_MODULE: "paraview/5.3.0"
+    INPUT_FILE: "<%= inputfile %>"
   native:
     resources:
-      nodes: "1:ppn=1:oakley"
+      nodes: "1:ppn=28:gpus=1:vis"
