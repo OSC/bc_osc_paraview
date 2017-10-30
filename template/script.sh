@@ -52,9 +52,9 @@ EOT
 # Restore the module environment to avoid conflicts
 module restore
 
-# Load the ParaView module
+# Load the Paraview module
 module load ${PARAVIEW_MODULE}
 
-# Launch ParaView
+# Launch Paraview
 module load virtualgl
 vglrun paraview
