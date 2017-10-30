@@ -8,6 +8,10 @@ and this project adheres to [Semantic Versioning](http://semver.org/spec/v2.0.0.
 ### Changed
 - Changed the `CHANGELOG.md` formatting.
 
+### Fixed
+- Fixed capitalization of ParaView name.
+  [#8](https://github.com/OSC/bc_osc_paraview/pull/8)
+
 ## [0.1.0] - 2017-06-14
 ### Changed
 - Refactored for the new Batch Connect app.
