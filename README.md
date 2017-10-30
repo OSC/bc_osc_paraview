@@ -4,7 +4,7 @@
 ![GitHub License](https://img.shields.io/github/license/osc/bc_osc_paraview.svg)
 
 A Batch Connect app designed for OSC OnDemand that launches ParaView within an
-Oakley shared node through Quick batch.
+Owens shared node through Quick batch.
 
 ## Prerequisites
 

@@ -8,6 +8,7 @@ and this project adheres to [Semantic Versioning](http://semver.org/spec/v2.0.0.
 ### Changed
 - Changed the `CHANGELOG.md` formatting.
 - Refactored to take advantage of new ERB templating in Dashboard plugin code.
+- Now uses Owens node instead of Oakley.
 
 ### Fixed
 - Fixed capitalization of ParaView name.
