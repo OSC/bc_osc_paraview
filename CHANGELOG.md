@@ -7,6 +7,7 @@ and this project adheres to [Semantic Versioning](http://semver.org/spec/v2.0.0.
 ## [Unreleased]
 ### Changed
 - Changed the `CHANGELOG.md` formatting.
+- Refactored to take advantage of new ERB templating in Dashboard plugin code.
 
 ### Fixed
 - Fixed capitalization of ParaView name.
