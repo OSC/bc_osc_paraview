@@ -1,7 +1,25 @@
-#!/bin/bash -l
+#!/usr/bin/env bash
+
+# Clean the environment
+module purge
 
 # Set working directory to home directory
 cd "${HOME}"
+
+#
+# Launch Xfce Window Manager and Panel
+#
+
+(
+  module restore
+  export XDG_CONFIG_HOME="<%= session.staged_root.join("config") %>"
+  export XDG_DATA_HOME="<%= session.staged_root.join("share") %>"
+  export XDG_CACHE_HOME="$(mktemp -d)"
+  xfwm4 --compositor=off --daemon --sm-client-disable
+  xsetroot -solid "#D3D3D3"
+  xfsettingsd --sm-client-disable
+  xfce4-panel --sm-client-disable
+) &
 
 # Restore the module environment to avoid conflicts
 module restore
@@ -10,30 +28,15 @@ module restore
 module load virtualgl paraview/5.3.0
 
 #
-# Launch Fluxbox
+# Start Paraview
 #
 
-# Create Fluxbox root or it will override the init rc file
-(
-  umask 077
-  mkdir -p "${HOME}/.fluxbox"
-)
+# Load the required environment
+module load intel/16.0.3 virtualgl paraview/5.3.0
 
-# Export the module function for the terminal
-[[ $(type -t module) == "function" ]] && export -f module
-
-# Start the Fluxbox window manager (it likes to crash on occassion, so we
-# restart it when it does)
-(
-  until fluxbox -display "${DISPLAY}.0" -rc "<%= session.staged_root.join("fluxbox.rc") %>"; do
-    echo "Fluxbox crashed with exit code $?. Respawning..." >&2
-    sleep 1
-  done
-) &
-
-#
-# Start Abaqus
-#
+# Output debug info
+module list
 
 # Launch ParaView
+set -x
 vglrun paraview

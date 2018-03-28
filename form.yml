@@ -8,4 +8,5 @@ attributes:
   bc_vnc_resolution:
     required: true
   bc_account:
+    label: "Project"
     help: "You can leave this blank if **not** in multiple projects."
