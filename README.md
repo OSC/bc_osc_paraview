@@ -76,4 +76,4 @@ Again, you do not need to restart the app as it isn't a Passenger app.
 * Documentation, website content, and logo is licensed under
   [CC-BY-4.0](https://creativecommons.org/licenses/by/4.0/)
 * Code is licensed under MIT (see LICENSE.txt)
-* PARAVIEW is a trademark of Kitware, Inc.
+* Kitware, kitware.com, the kitware.com logo, and all other trademarks, service marks, graphics and logos used in connection with kitware.com, or the Website are trademarks or registered trademarks of Kitware or Kitware's licensors.
