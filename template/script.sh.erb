@@ -24,15 +24,12 @@ cd "${HOME}"
 # Restore the module environment to avoid conflicts
 module restore
 
-# Load the necessary ParaView modules
-module load virtualgl paraview/5.3.0
-
 #
 # Start Paraview
 #
 
 # Load the required environment
-module load xalt/latest intel/16.0.3 virtualgl paraview/5.3.0
+module load xalt/latest intel/16.0.3 virtualgl <%= context.version %>
 
 # Output debug info
 module list
