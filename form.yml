@@ -1,6 +1,7 @@
 ---
 cluster: "quick"
 form:
+  - version
   - bc_account
   - bc_num_hours
   - bc_vnc_resolution
@@ -10,3 +11,11 @@ attributes:
   bc_account:
     label: "Project"
     help: "You can leave this blank if **not** in multiple projects."
+  version:
+    widget: select
+    label: "Paraview Version"
+    help: "This defines the version of Paraview you want to load."
+    options:
+      - [ "5.8.0", "paraview/5.8.0"]
+      - [ "5.5.2", "paraview/5.5.2"]
+      - [ "5.3.0", "paraview/5.3.0"]
