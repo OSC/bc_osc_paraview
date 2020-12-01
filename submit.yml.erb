@@ -1,7 +1,19 @@
+<%-
+  torque_cluster = OodAppkit.clusters[cluster].job_config[:adapter] == 'torque'
+
+  torque_args = "1:ppn=1:owens"
+  slurm_args = [ "--partition", "quick", "--nodes", "1", "--ntasks-per-node", "1" ]
+-%>
 ---
 batch_connect:
   template: vnc
 script:
   native:
+    <%- if torque_cluster -%>
     resources:
-      nodes: "1:ppn=1:owens"
+      nodes: "<%= torque_args %>"
+    <%- else -%>
+    <%- slurm_args.each do |arg| -%>
+    - "<%= arg %>"
+    <%- end -%>
+    <%- end -%>
