@@ -1,18 +1,12 @@
 ---
-cluster: "owens"
+cluster:
+  - "owens"
+  - "cardinal"
 form:
-  - version
+  - auto_modules_paraview
   - auto_accounts
   - bc_num_hours
   - bc_vnc_resolution
 attributes:
   bc_vnc_resolution:
     required: true
-  version:
-    widget: select
-    label: "Paraview Version"
-    help: "This defines the version of Paraview you want to load."
-    options:
-      - [ "5.8.0", "paraview/5.8.0"]
-      - [ "5.5.2", "paraview/5.5.2"]
-      - [ "5.3.0", "paraview/5.3.0"]

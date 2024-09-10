@@ -1,11 +1,14 @@
 <%-
-  args = [ "--partition", "quick", "--nodes", "1", "--ntasks-per-node", "1" ]
+  args =  if cluster == 'owens'
+            [ "--partition", "quick", "--nodes", "1", "--ntasks-per-node", "1" ]
+          else
+            ["--gres", "vis", "--nodes", "1", "--ntasks-per-node", "1", "--gpus", "1"]
+          end
 -%>
 ---
 batch_connect:
   template: vnc
 script:
-  accounting_id: "<%= account %>"
   native:
     <%- args.each do |arg| -%>
     - "<%= arg %>"
