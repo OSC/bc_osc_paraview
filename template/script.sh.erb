@@ -38,9 +38,9 @@ module restore
 
 # Load the required environment
 <%- if context.cluster == 'owens' -%>
-module load xalt/latest intel/16.0.3 virtualgl <%= context.auto_modules_paraview %>
+module load intel/16.0.3 virtualgl <%= context.auto_modules_paraview %>
 <%- else -%>
-module load xalt/latest virtualgl <%= context.auto_modules_paraview %>
+module load virtualgl <%= context.auto_modules_paraview %>
 <%- end -%>
 
 # Output debug info
