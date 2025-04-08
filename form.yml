@@ -1,6 +1,5 @@
 ---
 cluster:
-  - "owens"
   - "cardinal"
 form:
   - auto_modules_paraview
@@ -10,3 +9,5 @@ form:
 attributes:
   bc_vnc_resolution:
     required: true
+  auto_modules_paraview:
+    default: false
