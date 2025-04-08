@@ -1,6 +1,5 @@
 ---
 cluster:
-  - "owens"
   - "cardinal"
 form:
   - auto_modules_paraview
