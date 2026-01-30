@@ -37,11 +37,7 @@ module restore
 #
 
 # Load the required environment
-<%- if context.cluster == 'owens' -%>
-module load intel/16.0.3 virtualgl <%= context.auto_modules_paraview %>
-<%- else -%>
-module load virtualgl <%= context.auto_modules_paraview %>
-<%- end -%>
+module load virtualgl/3.1.1 <%= context.auto_modules_paraview %>
 
 # Output debug info
 module list
