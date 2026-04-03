@@ -37,7 +37,7 @@ module restore
 #
 
 # Load the required environment
-module load virtualgl/3.1.1 <%= context.auto_modules_paraview %>
+LMOD_EXACT_MATCH=no module load virtualgl <%= context.auto_modules_paraview %>
 
 # Output debug info
 module list
