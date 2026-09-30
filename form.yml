@@ -1,9 +1,11 @@
 ---
 cluster:
+  - "ascend"
   - "cardinal"
+  - "pitzer"
 form:
-  - auto_modules_paraview
   - auto_accounts
+  - auto_modules_paraview
   - bc_num_hours
   - bc_vnc_resolution
 attributes:
